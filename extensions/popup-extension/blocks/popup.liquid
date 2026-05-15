@@ -1,0 +1,34 @@
+<div id="my-popup">
+  <div class="popup-content">
+    <h2>Welcome!</h2>
+    <p>Get 10% off today</p>
+
+    <button onclick="document.getElementById('my-popup').style.display='none'">
+      Close
+    </button>
+  </div>
+</div>
+
+<style>
+#my-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  z-index: 9999;
+}
+
+.popup-content {
+  width: 300px;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Simple Popup",
+  "target": "body",
+  "settings": []
+}
+{% endschema %}
