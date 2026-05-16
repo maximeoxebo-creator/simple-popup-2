@@ -1,34 +1,36 @@
-<div id="my-popup">
-  <div class="popup-content">
-    <h2>Welcome!</h2>
-    <p>Get 10% off today</p>
-
-    <button onclick="document.getElementById('my-popup').style.display='none'">
-      Close
-    </button>
-  </div>
-</div>
-
-<style>
-#my-popup {
+<div id="simple-popup" style="
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   background: white;
-  padding: 20px;
-  border: 1px solid #ddd;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
   z-index: 9999;
-}
+  text-align:center;
+">
+  <h2>Bienvenue 👋</h2>
+  <p>Profitez de -10% aujourd'hui</p>
 
-.popup-content {
-  width: 300px;
-}
-</style>
+  <button onclick="document.getElementById('simple-popup').style.display='none'"
+    style="
+      margin-top:15px;
+      background:black;
+      color:white;
+      border:none;
+      padding:10px 20px;
+      cursor:pointer;
+      border-radius:8px;
+    ">
+    Fermer
+  </button>
+</div>
 
 {% schema %}
 {
   "name": "Simple Popup",
-  "target": "body",
+  "target": "section",
   "settings": []
 }
 {% endschema %}
